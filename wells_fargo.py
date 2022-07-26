@@ -10,6 +10,8 @@ class WellsFargoSite(AutoSite):
     
     def get_login_page(self):
         self.driver.get(self.url)
-        self.driver.find_element(By.NAME, "j_username").send_keys()
-        
+        username = self.cred_dict[self.name][0]
+        password = self.cred_dict[self.name][1]
+        self.driver.find_element(By.NAME, "j_username").send_keys(username)
+        self.driver.find_element(By.NAME, "j_password").send_keys(password)
     

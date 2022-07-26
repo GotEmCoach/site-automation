@@ -1,2 +1,3 @@
-credentials/*
-
+credentials/salt.salt
+credentials/credentials*
+**__pycache__**
